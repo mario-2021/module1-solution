@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="MsgApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="./angular.min.js"></script>
+    <script src="./app.js"></script>
+    <link rel="stylesheet" href="./style.css">
+    <title>Assignment-1</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Assignment-1</h1>
+
+        <h2>Lunch Checker</h2>
+
+        <div ng-controller="MsgController">
+
+            <input type="text" placeholder="list comma separated dishes you usually have for lunch" ng-model="items">
+            <br>
+            <button ng-click="getItems();">Check If Too Much</button>
+            <br>
+            <span ng-class="{
+                '': checker === null,
+            'text-danger border border-danger': checker === false,
+            'text-success border border-success': checker,
+        }">{{message}}</span>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
